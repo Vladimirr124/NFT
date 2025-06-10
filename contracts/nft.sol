@@ -19,7 +19,7 @@ contract SupetUniqueToken is ERC721, Ownable {
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://www.miladymaker.net/milady/json/8918";
+        return "ipfs://QmPMc4tcBsMqLRuCQtPmPe84bpSjrC3Ky7t3JWuHXYB4aS/";
     }
 
     function safeMint(address to) public onlyOwner returns (uint256) {
@@ -41,4 +41,9 @@ contract SupetUniqueToken is ERC721, Ownable {
         require(address(this).balance > 0, "No balance to withdraw");
         payable(owner()).transfer(address(this).balance);
     }
+
+    function updatePrice(uint256 newPrice) public onlyOwner {
+    _price = newPrice;
+}
+
 }
