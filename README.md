@@ -11,3 +11,4 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+wowking NFT on sepoila testnet : 0x0e1B0513c233071f20402fD799aC588814450cEd
